@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "langchain-book"
+version = "0.1.0"
+description = ""
+authors = ["harukaxq <h.tamura@cibo.design>"]
+readme = "README.md"
+packages = [{include = "langchain_book"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openai = "^0.27.8"
+pypdf = "^3.11.1"
+pymupdf = "^1.22.5"
+spacy = "^3.5.4"
+python-dotenv = "^1.0.0"
+redis = "^4.6.0"
+pinecone-client = "^2.2.2"
+chainlit = "^0.5.1"
+google-search-results = "^2.4.2"
+chromadb = "^0.3.26"
+bs4 = "^0.0.1"
+youtube-transcript-api = "^0.6.1"
+pytube = "^15.0.0"
+wikipedia = "^1.4.0"
+pylint = "^2.17.5"
+black = "^23.7.0"
+autopep8 = "^2.0.2"
+steamship = "^2.17.22"
+ipython = "^8.14.0"
+lark = "^1.1.7"
+matplotlib = "^3.7.2"
+arxiv = "^1.4.8"
+playwright = "^1.36.0"
+lxml = "^4.9.3"
+langchain = "^0.0.261"
+unstructured = "^0.9.2"
+libmagic = "^1.0"
+rich = "^13.5.2"
+rank-bm25 = "^0.2.2"
+faiss-cpu = "^1.7.4"
+gitpython = "^3.1.32"
+isort = "^5.12.0"
+yapf = "^0.40.1"
+ruff = "^0.0.285"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+line_length = 120
+
