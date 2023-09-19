@@ -10,5 +10,5 @@ text_splitter = SpacyTextSplitter(  #← SpacyTextSplitterを初期化する
 )
 splitted_documents = text_splitter.split_documents(documents) #← ドキュメントを分割する
 
-print(f"分割前のドキュメントの数: {len(documents)}")
+print(f"分割前のドキュメント数: {len(documents)}")
 print(f"分割後のドキュメント数: {len(splitted_documents)}")
