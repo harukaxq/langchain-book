@@ -17,7 +17,7 @@ database = Chroma(
 retriever = database.as_retriever() #← データベースをRetrieverに変換する
 
 qa = RetrievalQA.from_llm(  #← RetrievalQAを初期化する
-    llm=chat,  #← チャットモデルを指定する
+    llm=chat,  #← Chat modelsを指定する
     retriever=retriever,  #← Retrieverを指定する
     return_source_documents=True  #← 返答にソースドキュメントを含めるかどうかを指定する
 )

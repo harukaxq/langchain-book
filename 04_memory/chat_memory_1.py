@@ -23,7 +23,7 @@ async def on_message(message: str):
 
     messages.append(HumanMessage(content=message)) #← ユーザーからのメッセージを追加
 
-    result = chat( #← ChatModelを使って言語モデルを呼び出す
+    result = chat( #← Chat modelsを使って言語モデルを呼び出す
         messages
     )
 

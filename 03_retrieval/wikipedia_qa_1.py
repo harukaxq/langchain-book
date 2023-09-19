@@ -11,7 +11,7 @@ retriever = WikipediaRetriever(  #← WikipediaRetrieverを初期化する
 )
 
 chain = RetrievalQA.from_llm( #← RetrievalQAを初期化する
-    llm=chat, #← 使用するChatModelを指定する
+    llm=chat, #← 使用するChat modelsを指定する
     retriever=retriever, #← 使用するRetrieverを指定する
     return_source_documents=True, #← 情報の取得元のドキュメントを返すようにする
 )

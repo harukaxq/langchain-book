@@ -12,7 +12,7 @@ chat = ChatOpenAI(
 )
 
 memory = ConversationSummaryMemory(  #← ConversationSummaryMemoryを使用するように変更
-    llm=chat,  #← チャットモデルを指定する
+    llm=chat,  #← Chat modelsを指定する
     return_messages=True,
 )
 

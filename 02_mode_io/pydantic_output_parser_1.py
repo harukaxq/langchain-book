@@ -19,7 +19,7 @@ class Smartphone(BaseModel): #← Pydanticのモデルを定義する
 
 parser = PydanticOutputParser(pydantic_object=Smartphone) #← PydanticOutputParserをSmartPhoneモデルで初期化する
 
-result = chat([ #← チャットモデルにHumanMessageを渡して、文章を生成する
+result = chat([ #← Chat modelsにHumanMessageを渡して、文章を生成する
     HumanMessage(content="Androidでリリースしたスマートフォンを1個挙げて"),
     HumanMessage(content=parser.get_format_instructions())
 ])

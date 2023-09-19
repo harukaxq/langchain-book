@@ -5,8 +5,8 @@ from langchain.schema import HumanMessage
 
 class LogCallbackHandler(BaseCallbackHandler): #← Callbackを作成する
 
-    def on_chat_model_start(self, serialized, messages, **kwargs): #← ChatModelの実行開始時に呼び出される処理を定義する
-        print("ChatModelの実行を開始します....")
+    def on_chat_model_start(self, serialized, messages, **kwargs): #← Chat modelsの実行開始時に呼び出される処理を定義する
+        print("Chat modelsの実行を開始します....")
         print(f"入力: {messages}")
 
     def on_chain_start(self, serialized, inputs, **kwargs): #← Chainの実行開始時に呼び出される処理を定義する
@@ -15,7 +15,7 @@ class LogCallbackHandler(BaseCallbackHandler): #← Callbackを作成する
 
 chat = ChatOpenAI(
     model="gpt-3.5-turbo",
-    callbacks=[ #← ChatModelの初期化時にCallbackを指定する
+    callbacks=[ #← Chat modelsの初期化時にCallbackを指定する
         LogCallbackHandler() #← 作成したLogCallbackHandlerを指定する
     ]
 )
