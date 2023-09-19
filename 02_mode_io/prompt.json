@@ -1,0 +1,11 @@
+{
+    "input_variables": [
+        "product"
+    ],
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "{product}\u306f\u3069\u3053\u306e\u4f1a\u793e\u304c\u958b\u767a\u3057\u305f\u88fd\u54c1\u3067\u3059\u304b\uff1f",
+    "template_format": "f-string",
+    "validate_template": true,
+    "_type": "prompt"
+}
