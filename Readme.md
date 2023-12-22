@@ -1,12 +1,29 @@
 # LangChain Book
-このリポジトリは書籍「[LangChain完全入門　生成AIアプリケーション開発がはかどる大規模言語モデルの操り方](https://book.impress.co.jp/books/1123101047)」で作成するソースコードです。
 
+このリポジトリは書籍「[LangChain 完全入門　生成 AI アプリケーション開発がはかどる大規模言語モデルの操り方](https://book.impress.co.jp/books/1123101047)」で作成するソースコードです。
 
-## 04_memoryのサンプルコードが正常に動作しない問題について
-4章で使用しているチャット画面を作成するライブラリであるchainlitの破壊的アップデートの影響でサンプルコードが正常に動作しない問題が発生しています。
+## サンプルコードが正常に動作しない問題について
 
-以下コマンドを実行することで、執筆時点のバージョンに下げて正常に動作せることができます。
+### ライブラリバージョンについて
+
+本書のサンプルコードで使用しているライブラリに破壊的変更があり、手順どおりにコマンドを実行すると正常動作しないバージョンのライブラリがインストールされる事象が確認されています。
+
+以下の手順でライブラリをインストールしてください。
+
+・Windows の場合
 
 ```
-python3 -m pip install chainlit==0.5.1
+wget https://raw.githubusercontent.com/harukaxq/langchain-book/master/requirements.txt -OutFile requirements.txt
+python3 -m pip install -r requirements.txt
 ```
+
+・macOS の場合
+
+```
+wget https://raw.githubusercontent.com/harukaxq/langchain-book/master/requirements.txt
+python3 -m pip install -r requirements.txt
+```
+
+### Python のバージョンについて
+
+3.12 以上のバージョンを使用すると、サンプルコードが正常に動作しない事象が確認されています。3.10、3.11 で動作確認しているため、正常に動作しない場合は、Python のバージョンを 3.10 以上、3.12 未満に変更してください。
