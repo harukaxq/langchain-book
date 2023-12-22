@@ -77,7 +77,7 @@ async def on_message(input_message):
     """
 
     result = chat([
-        HumanMessage(content=prompt.format(documents=documents_string,
+        HumanMessage(content=prompt.format(document=documents_string,
                                            query=input_message)) #← input_messageに変更
     ])
     await cl.Message(content=result.content).send()
