@@ -51,3 +51,18 @@ result = chat([
 ```
 
 formatメソッドでの引数名はdocumentsではなくdocumentが正しいです。
+
+### Agentモジュールで使用するモデルについて
+Agentを動作させるためのモデルとして、gpt-3.5-turboを使用するとプロンプトを無視してしまい、正常に動作しない問題が確認されています。
+
+執筆当初は性能の良いモデルである、gpt-4を使用するにはOpenAIに申請が必要な都合上、gpt-3.5-turboを使用していましたが、現在は全員に開放されています。
+
+gpt-3.5-turboを使用すると正常に動作しない場合は、以下のように修正してgpt-4を使用してください。
+
+```python
+chat = ChatOpenAI( temperature=0, model="gpt-3.5-turbo" )
+```
+↓
+```python
+chat = ChatOpenAI( temperature=0, model="gpt-4" )
+```
