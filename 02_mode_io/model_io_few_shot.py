@@ -20,7 +20,9 @@ few_shot_prompt = FewShotPromptTemplate(  #← FewShotPromptTemplateの準備
     suffix="入力: {input_string}\n出力:",  #← 出力例の入力変数を定義
     input_variables=["input_string"],  #← FewShotPromptTemplateの入力変数を設定
 )
-llm = OpenAI()
+llm = OpenAI(
+    model="gpt-3.5-turbo-instruct"
+)
 formatted_prompt = few_shot_prompt.format( #← FewShotPromptTemplateを使ってプロンプトを作成
     input_string="私はさまざまな機能がモジュールとして提供されているLangChainを使ってアプリケーションを開発しています"
 )
